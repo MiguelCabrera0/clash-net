@@ -17,4 +17,10 @@ namespace clashNet
                 numBytesRequested: 256 / 8));
         }
     }
+    public class UserData
+    {
+        public string user { get; set; }
+
+        public string password { get; set; }
+    }
 }

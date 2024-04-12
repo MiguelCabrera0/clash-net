@@ -7,10 +7,10 @@ namespace clashNet.Controllers
     public class LoginController : ControllerBase
     {
         [HttpPost(Name = "login")]
-        public int login(string user, string password)
+        public int login([FromBody] UserData userData)
         {
-            bool exists = Globals.users.TryGetValue(user, out string? hashedPassword);
-            if (exists && hashedPassword == Globals.HashPassword(password))
+            bool exists = Globals.users.TryGetValue(userData.user, out string? hashedPassword);
+            if (exists && hashedPassword == Globals.HashPassword(userData.password))
             {
                 return 200;
             }
