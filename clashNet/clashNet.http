@@ -1,0 +1,6 @@
+@clashNet_HostAddress = http://localhost:5038
+
+GET {{clashNet_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
